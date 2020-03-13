@@ -25,7 +25,6 @@ public:
         ssize_t nread = process_vm_readv(processid, &local, 2, &remote, 1, 0);
         
         return buf;
-
     }
 
     template <typename T>
@@ -44,7 +43,6 @@ public:
         remote.iov_len = sizeof(T); 
 
         process_vm_writev(processId, &local, 2, &remote, 1, 0);
-           
     }
 };
 
